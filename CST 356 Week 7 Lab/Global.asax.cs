@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CST_356_Week_7_Lab.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,7 @@ namespace CST_356_Week_7_Lab
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            DependencyInjectionConfig.Register();
         }
     }
 }
