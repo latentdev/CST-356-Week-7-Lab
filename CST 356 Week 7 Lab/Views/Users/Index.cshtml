@@ -11,10 +11,10 @@
         <strong>Warning</strong> You have more than 2 users.
     </div>
 }
-    <div class="card bg-dark text-light" style="margin-top:10px;">
-        <div class="row col-md-12">
-            <h2 class="col-md-10" style="display:inline-block; margin-top:15px; padding:10px;">Students</h2>
-            <div class="col-md-2" style="margin-top:10px; margin-bottom:10px; padding-right:0px; padding-top:10px; padding-bottom:10px; float:right; ">
+    <div class="card bg-dark text-light" id="title-card">
+        <div class="row">
+            <h2 class="col-md-10" id="title-card-header">Students</h2>
+            <div class="col-md-2" id="title-card-button">
                 @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-info btn-lg " })
             </div>
         </div>
@@ -64,9 +64,9 @@
                 @Html.ActionLink("Classes", "Index", "Class", new { userID = item.ID }, new { @class = "btn btn-outline-success btn-sm" })
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-outline-info btn-sm" }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-outline-warning btn-sm" }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-outline-info btn-sm" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-info btn-sm" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-outline-danger btn-sm" })
             </td>
         </tr>
     }
@@ -79,8 +79,9 @@
         <p class="card-text" id="selected-row">Select a row</p>
     </div>
 </div>
-<button id="Show" class="btn btn-default">Show</button>
-<button id="Hide" class="btn btn-default">Hide</button>
+<button id="Show" class="btn btn-default" style="margin-top:10px;">Show</button>
+<button id="Hide" class="btn btn-default" style="margin-top:10px;">Hide</button>
+
 @section Scripts{
     <script>
         $(document).ready(function () {
